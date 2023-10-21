@@ -191,6 +191,97 @@ Design the frontend by creating HTML templates in the `templates` folder. Here's
 **5. Styling:**
 
 You can add CSS in the `static/style.css` file to style your web app.
+
+Certainly! Here's a simple CSS code snippet that you can use in your `static/style.css` file to style your to-do list web app:
+
+```css
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed {
+    background-color: #d3f8e2; /* Light green for completed tasks */
+}
+
+li a {
+    color: #e74c3c; /* Red for delete links */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+form {
+    text-align: center;
+    padding: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    li {
+        flex-direction: column;
+    }
+
+    li a {
+        margin-top: 10px;
+    }
+}
+```
+
+This CSS code includes styles for the to-do list items, the form for adding tasks, and responsive design adjustments for smaller screens. You can modify and customize these styles to fit your design preferences.
+
 ### ---------------------------------------------------------------------------------
 ### How to check Python Flask in my desktop ?
 To check if Python and Flask are installed on your desktop, follow these steps:
