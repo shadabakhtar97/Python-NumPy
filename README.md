@@ -256,7 +256,10 @@ This will start a development server, and you should see output indicating that 
 ### ---------------------------------------------------------------------------------
 ### Flask Framwork Issues
 ### Issue
+```bash
 flask --version
+```
+```bash
 flask : The term 'flask' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
 the spelling of the name, or if a path was included, verify that the path is correct and try again.
 At line:1 char:1
@@ -264,6 +267,7 @@ At line:1 char:1
 + ~~~~~
     + CategoryInfo          : ObjectNotFound: (flask:String) [], CommandNotFoundException
     + FullyQualifiedErrorId : CommandNotFoundException
+```
 ### Solution
 ```bash
 python -m flask --version
