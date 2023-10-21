@@ -192,3 +192,66 @@ Design the frontend by creating HTML templates in the `templates` folder. Here's
 
 You can add CSS in the `static/style.css` file to style your web app.
 ### ---------------------------------------------------------------------------------
+### How to check Python Flask in my desktop ?
+To check if Python and Flask are installed on your desktop, follow these steps:
+
+**1. Check Python Installation:**
+
+First, ensure that Python is installed on your desktop. Open a terminal or command prompt and type the following command:
+
+```bash
+python --version
+```
+
+This command should display the installed Python version. If you see an error or if Python is not installed, you'll need to download and install Python. You can download Python from the official Python website: https://www.python.org/downloads/
+
+**2. Check Flask Installation:**
+
+Once you've verified that Python is installed, you can check if Flask is installed. To do this, open your terminal or command prompt and run the following command:
+
+```bash
+flask --version
+```
+
+If Flask is installed, this command will display the Flask version. If it's not installed, you'll see an error message.
+
+**3. Install Flask:**
+
+If Flask is not installed, you can install it using `pip`, which is the Python package manager. Open your terminal or command prompt and run the following command:
+
+```bash
+pip install Flask
+```
+
+This command will download and install Flask and its dependencies.
+
+**4. Verify Flask Installation:**
+
+After installing Flask, you can verify that it's installed correctly by running the `flask --version` command again. It should now display the Flask version.
+
+**5. Test Flask:**
+
+You can create a simple Flask application to test if it's working. Create a Python file, such as `app.py`, with the following code:
+
+```python
+from flask import Flask
+
+app = Flask(__name)
+
+@app.route('/')
+def hello():
+    return 'Hello, Flask!'
+
+if __name__ == '__main__':
+    app.run()
+```
+
+Save the file, and in your terminal or command prompt, navigate to the directory where `app.py` is located. Then run the following command:
+
+```bash
+python app.py
+```
+
+This will start a development server, and you should see output indicating that the Flask app is running. Open a web browser and go to `http://127.0.0.1:5000/`, and you should see "Hello, Flask!" displayed in your browser. This confirms that Flask is working on your desktop.
+### ---------------------------------------------------------------------------------
+
