@@ -345,6 +345,57 @@ python app.py
 
 This will start a development server, and you should see output indicating that the Flask app is running. Open a web browser and go to `http://127.0.0.1:5000/`, and you should see "Hello, Flask!" displayed in your browser. This confirms that Flask is working on your desktop.
 ### ---------------------------------------------------------------------------------
+### How to Run Python Flask Project ?
+To run a Python Flask project, follow these steps:
+
+1. **Navigate to Your Project Directory:**
+   Open your terminal or command prompt and navigate to the directory where your Flask project is located. You should be in the directory containing your Flask application file (usually named `app.py`) and any associated files and folders.
+
+2. **Activate a Virtual Environment (if used):**
+   If you are using a virtual environment (recommended), activate it by running the appropriate command based on your operating system:
+
+   - On Windows:
+
+     ```
+     venv\Scripts\activate
+     ```
+
+   - On macOS and Linux:
+
+     ```
+     source venv/bin/activate
+     ```
+
+   Activating the virtual environment isolates your project's dependencies from the system-wide Python installation.
+
+3. **Run the Flask Application:**
+   In the terminal, while inside your project directory and with the virtual environment activated (if used), run the Flask application by executing the `flask run` command. For example:
+
+   ```
+   flask run
+   ```
+
+   This command starts the Flask development server and should display output similar to the following:
+
+   ```
+    * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+   ```
+
+   This indicates that your Flask app is running locally, and you can access it by visiting `http://127.0.0.1:5000/` in your web browser.
+
+4. **Access Your Flask App:**
+   Open a web browser and navigate to the URL `http://127.0.0.1:5000/` or `http://localhost:5000/`. You should see your Flask application running. If you have defined routes in your Flask app, you can access them by navigating to the appropriate URLs as defined in your routes.
+
+5. **Interact with Your Flask App:**
+   You can interact with your Flask app by using the web interface in your browser or by making HTTP requests programmatically using tools like `curl` or libraries like `requests` in Python.
+
+6. **To Stop the Flask Development Server:**
+   To stop the Flask development server, go back to your terminal and press `Ctrl+C`. This will halt the server, and you'll see a message like " * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)".
+
+Your Flask application is now up and running, and you can continue to develop and test it. Be sure to make changes in your Flask code, templates, or static files, and the development server will automatically reload to reflect those changes as you save them.
+
+
+### ---------------------------------------------------------------------------------
 ### Flask Framwork Issues
 ### Issue
 ```bash
