@@ -254,4 +254,19 @@ python app.py
 
 This will start a development server, and you should see output indicating that the Flask app is running. Open a web browser and go to `http://127.0.0.1:5000/`, and you should see "Hello, Flask!" displayed in your browser. This confirms that Flask is working on your desktop.
 ### ---------------------------------------------------------------------------------
+### Flask Framwork Issues
+### Issue
+flask --version
+flask : The term 'flask' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ flask --version
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (flask:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+### Solution
+```bash
+python -m flask --version
+```
+### ---------------------------------------------------------------------------------
 
