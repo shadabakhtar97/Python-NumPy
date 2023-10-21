@@ -414,5 +414,41 @@ At line:1 char:1
 ```bash
 python -m flask --version
 ```
+
+### Issue
+```bash
+venv\Scripts\activate
+venv\Scripts\activate : The module 'venv' could not be loaded. For more information, run 'Import-Module venv'.
+At line:1 char:1
++ venv\Scripts\activate
++ ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (venv\Scripts\activate:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CouldNotAutoLoadModule
+```
+### Solution
+The error message you're encountering indicates that the `venv` module couldn't be loaded, and it's likely because you're using PowerShell in Windows. The `activate` script is meant to be run in Command Prompt, not PowerShell. Here's how you can activate the virtual environment in PowerShell:
+
+1. **Check Virtual Environment Name:**
+   First, ensure you are in the correct directory where your virtual environment (e.g., `venv`) is located. You can use the `ls` command to list the contents of the directory and confirm that your virtual environment is present.
+
+2. **Change Execution Policy (if needed):**
+   By default, PowerShell may have restrictions on running scripts. You might need to change the execution policy to allow running scripts. Open PowerShell as an administrator and run the following command:
+
+   ```powershell
+   Set-ExecutionPolicy RemoteSigned
+   ```
+
+   You can choose a less restrictive execution policy if security isn't a concern.
+
+3. **Activate the Virtual Environment:**
+   In PowerShell, you can activate the virtual environment using the `Activate.ps1` script. Here's how you can do it:
+
+   ```powershell
+   .\venv\Scripts\Activate.ps1
+   ```
+
+   Make sure to use a dot (`.`) before the backslash to run the script in the current context.
+
+After running the `Activate.ps1` script, your virtual environment should be activated. You'll see the virtual environment name in your PowerShell prompt, indicating that the virtual environment is active. You can now proceed to run your Flask project within the virtual environment.
 ### ---------------------------------------------------------------------------------
 
